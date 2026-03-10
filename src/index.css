@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-ink-bg: #050505;
+  --color-ink-surface: #111111;
+  --color-ink-surface-hover: #1a1a1a;
+  --color-ink-border: #222222;
+  --color-ink-text: #ffffff;
+  --color-ink-text-muted: #a1a1aa;
+  
+  --color-accent-purple: #b026ff;
+  --color-accent-blue: #00f0ff;
+}
+
+body {
+  background-color: var(--color-ink-bg);
+  color: var(--color-ink-text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ink-text-muted);
+}
+
+/* Utilities */
+.text-gradient {
+  background: linear-gradient(to right, var(--color-accent-purple), var(--color-accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(to right, var(--color-accent-purple), var(--color-accent-blue));
+}
+
+.glass-panel {
+  background: rgba(17, 17, 17, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
